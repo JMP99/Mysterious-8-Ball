@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4pM-yH-29Q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mysterious_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Magic 8 Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBF-Vg-eqA">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                                <color key="textColor" red="0.22734644541534679" green="0.7079631979695431" blue="0.42321521397252804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fortune" translatesAutoresizingMaskIntoConstraints="NO" id="unV-s9-nkn">
+                                <rect key="frame" x="117" y="434" width="142" height="128"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a &quot;yes&quot; or &quot;no&quot; question!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-Z0-nw8">
+                                <rect key="frame" x="53" y="183" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhq-5m-gge">
+                                <rect key="frame" x="0.0" y="124" width="375" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <state key="normal" title="Click for Magic 8 Ball!">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tl6-uY-I0F" kind="show" id="hp3-so-FNq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="unV-s9-nkn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="164.5" id="59F-9h-fGb"/>
+                            <constraint firstItem="unV-s9-nkn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7KN-tW-nZn"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0jL-HX-ucu" appends="YES" id="18d-Z1-2si"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qgi-ji-S9d"/>
+                    <connections>
+                        <outlet property="questionTextField" destination="g8s-Z0-nw8" id="Rj9-Gn-XKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0jL-HX-ucu">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="Wqv-yo-oq8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1109.5999999999999" y="-553.67316341829087"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="IfR-y9-8M6">
+            <objects>
+                <viewController id="tl6-uY-I0F" customClass="SecondViewController" customModule="Mysterious_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9uI-Ru-Cjg"/>
+                        <viewControllerLayoutGuide type="bottom" id="jpw-8G-Nwu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cgL-lp-C8M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBr-KA-H5Q">
+                                <rect key="frame" x="17" y="86" width="343" height="38"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="m8b" translatesAutoresizingMaskIntoConstraints="NO" id="MFq-k0-wJi">
+                                <rect key="frame" x="5" y="212" width="365" height="330"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luR-7S-Frl">
+                                <rect key="frame" x="143" y="305" width="89" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SHAKE TO FIND OUT!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiX-zP-1As">
+                                <rect key="frame" x="5" y="132" width="365" height="43"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mBr-KA-H5Q" firstAttribute="top" secondItem="9uI-Ru-Cjg" secondAttribute="bottom" constant="22" id="8Rj-Ke-B9O"/>
+                            <constraint firstItem="LiX-zP-1As" firstAttribute="top" secondItem="mBr-KA-H5Q" secondAttribute="bottom" constant="37" id="MoV-bG-aQU"/>
+                            <constraint firstItem="LiX-zP-1As" firstAttribute="top" secondItem="mBr-KA-H5Q" secondAttribute="bottom" constant="37" id="Pkb-2z-wLr"/>
+                            <constraint firstItem="MFq-k0-wJi" firstAttribute="top" secondItem="LiX-zP-1As" secondAttribute="bottom" constant="8" id="Tkh-8r-Bgw"/>
+                            <constraint firstAttribute="trailing" secondItem="LiX-zP-1As" secondAttribute="trailing" constant="5" id="WNG-uL-AJv"/>
+                            <constraint firstItem="LiX-zP-1As" firstAttribute="leading" secondItem="cgL-lp-C8M" secondAttribute="leading" constant="5" id="Xsg-bR-Tgl"/>
+                            <constraint firstAttribute="trailing" secondItem="mBr-KA-H5Q" secondAttribute="trailing" constant="15" id="mBw-Nx-ukw"/>
+                            <constraint firstAttribute="trailing" secondItem="MFq-k0-wJi" secondAttribute="trailing" constant="5" id="q8W-FB-RnM"/>
+                            <constraint firstItem="mBr-KA-H5Q" firstAttribute="leading" secondItem="cgL-lp-C8M" secondAttribute="leading" constant="17" id="qz7-1t-DEM"/>
+                            <constraint firstItem="jpw-8G-Nwu" firstAttribute="top" secondItem="MFq-k0-wJi" secondAttribute="bottom" constant="125" id="rRj-lA-XWb"/>
+                            <constraint firstItem="MFq-k0-wJi" firstAttribute="leading" secondItem="cgL-lp-C8M" secondAttribute="leading" constant="5" id="v9D-Ev-KvT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="mBr-KA-H5Q" id="pVH-Jo-xjE"/>
+                        <outlet property="magicEight" destination="MFq-k0-wJi" id="8iW-y5-jjm"/>
+                        <outlet property="responseLabel" destination="luR-7S-Frl" id="VaR-ab-cJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTZ-g9-PfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013.5999999999999" y="-553.67316341829087"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bDr-Bp-SoM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4pM-yH-29Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zUo-dl-Fm6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vWH-Bb-qVE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDm-lc-TJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="-552.77361319340332"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fortune" width="356" height="401"/>
+        <image name="m8b" width="900" height="900"/>
+    </resources>
+</document>
